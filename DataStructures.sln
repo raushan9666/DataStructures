@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleLinkedList", "SingleLinkedList\SingleLinkedList.csproj", "{2D5B573A-D104-46F6-A619-208D6BA88CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Startup", "Startup\Startup.csproj", "{4004BBE6-639A-4198-84DC-60C6F5AF7F30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLoader", "DataLoader\DataLoader.csproj", "{530BC277-8ACD-4716-9AF9-1E97B36EC3D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://raushan.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SingleLinkedList\\SingleLinkedList.csproj
+		SccProjectName1 = SingleLinkedList
+		SccLocalPath1 = SingleLinkedList
+		SccProjectUniqueName2 = Startup\\Startup.csproj
+		SccProjectName2 = Startup
+		SccLocalPath2 = Startup
+		SccProjectUniqueName3 = DataLoader\\DataLoader.csproj
+		SccProjectName3 = DataLoader
+		SccLocalPath3 = DataLoader
+		SccProjectUniqueName4 = Testing\\Testing.csproj
+		SccProjectName4 = Testing
+		SccLocalPath4 = Testing
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D5B573A-D104-46F6-A619-208D6BA88CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D5B573A-D104-46F6-A619-208D6BA88CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D5B573A-D104-46F6-A619-208D6BA88CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D5B573A-D104-46F6-A619-208D6BA88CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4004BBE6-639A-4198-84DC-60C6F5AF7F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4004BBE6-639A-4198-84DC-60C6F5AF7F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4004BBE6-639A-4198-84DC-60C6F5AF7F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4004BBE6-639A-4198-84DC-60C6F5AF7F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530BC277-8ACD-4716-9AF9-1E97B36EC3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530BC277-8ACD-4716-9AF9-1E97B36EC3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530BC277-8ACD-4716-9AF9-1E97B36EC3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530BC277-8ACD-4716-9AF9-1E97B36EC3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
