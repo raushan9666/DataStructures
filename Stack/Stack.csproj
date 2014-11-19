@@ -4,19 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{530BC277-8ACD-4716-9AF9-1E97B36EC3D8}</ProjectGuid>
+    <ProjectGuid>{8DA7A9AE-67AC-42BF-8E68-788A1DDB8A73}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataLoader</RootNamespace>
-    <AssemblyName>DataLoader</AssemblyName>
+    <RootNamespace>Stack</RootNamespace>
+    <AssemblyName>Stack</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,12 +23,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,23 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetLinkedList.cs" />
-    <Compile Include="GetQueue.cs" />
+    <Compile Include="BaseStack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GetStack.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Queues\Queues.csproj">
-      <Project>{38f3bd27-063e-47c9-98dc-a4e8a7defb01}</Project>
-      <Name>Queues</Name>
-    </ProjectReference>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\SingleLinkedList\SingleLinkedList.csproj">
       <Project>{2d5b573a-d104-46f6-a619-208d6ba88cc6}</Project>
       <Name>SingleLinkedList</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Stack\Stack.csproj">
-      <Project>{8da7a9ae-67ac-42bf-8e68-788a1ddb8a73}</Project>
-      <Name>Stack</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

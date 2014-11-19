@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Startup.QueueMain</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,9 +59,17 @@
       <Project>{530bc277-8acd-4716-9af9-1e97b36ec3d8}</Project>
       <Name>DataLoader</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Queues\Queues.csproj">
+      <Project>{38f3bd27-063e-47c9-98dc-a4e8a7defb01}</Project>
+      <Name>Queues</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SingleLinkedList\SingleLinkedList.csproj">
       <Project>{2d5b573a-d104-46f6-a619-208d6ba88cc6}</Project>
       <Name>SingleLinkedList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Stack\Stack.csproj">
+      <Project>{8da7a9ae-67ac-42bf-8e68-788a1ddb8a73}</Project>
+      <Name>Stack</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

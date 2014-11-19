@@ -11,25 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLoader", "DataLoader\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{8DA7A9AE-67AC-42BF-8E68-788A1DDB8A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queues", "Queues\Queues.csproj", "{38F3BD27-063E-47C9-98DC-A4E8A7DEFB01}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://raushan.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SingleLinkedList\\SingleLinkedList.csproj
-		SccProjectName1 = SingleLinkedList
-		SccLocalPath1 = SingleLinkedList
-		SccProjectUniqueName2 = Startup\\Startup.csproj
-		SccProjectName2 = Startup
-		SccLocalPath2 = Startup
-		SccProjectUniqueName3 = DataLoader\\DataLoader.csproj
-		SccProjectName3 = DataLoader
-		SccLocalPath3 = DataLoader
-		SccProjectUniqueName4 = Testing\\Testing.csproj
-		SccProjectName4 = Testing
-		SccLocalPath4 = Testing
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -51,6 +37,14 @@ Global
 		{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23B9BBCB-F5CE-4AAB-A964-1EB9F500375F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA7A9AE-67AC-42BF-8E68-788A1DDB8A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA7A9AE-67AC-42BF-8E68-788A1DDB8A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA7A9AE-67AC-42BF-8E68-788A1DDB8A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA7A9AE-67AC-42BF-8E68-788A1DDB8A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F3BD27-063E-47C9-98DC-A4E8A7DEFB01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F3BD27-063E-47C9-98DC-A4E8A7DEFB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F3BD27-063E-47C9-98DC-A4E8A7DEFB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F3BD27-063E-47C9-98DC-A4E8A7DEFB01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

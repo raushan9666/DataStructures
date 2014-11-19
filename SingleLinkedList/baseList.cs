@@ -30,7 +30,7 @@ namespace SingleLinkedList
         }
 
 
-        public void Add(T data)
+        public   virtual void Add(T data)
         {
             node<T> temp = new node<T> { data = data, Next = null };
 
@@ -51,7 +51,7 @@ namespace SingleLinkedList
                 count++;
             }
         }
-        public T Delete()
+        public virtual T Delete()
         {
             T data = default(T);
             if(this.Head!=null)
@@ -62,7 +62,7 @@ namespace SingleLinkedList
             }
             return data;
         }
-        public void Display()
+        public virtual void Display()
         {
             if(this.Head!=null)
             {

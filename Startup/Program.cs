@@ -1,4 +1,6 @@
-﻿using SingleLinkedList;
+﻿using Queues;
+using SingleLinkedList;
+using Stack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Startup
 {
-    class Program
+    class LinkedListMain
     {
         static void Main(string[] args)
         {
@@ -18,6 +20,40 @@ namespace Startup
             reverselist<int> reversed = t1.Reverse();
 
             reversed.Display();
+            Console.ReadLine();
+        }
+    }
+
+    class StackMain
+    {
+        static void Main(string []args)
+        {
+            BaseStack<int> t = DataLoader.GetStack.IntStack(5);
+            for (int i = 0; i < 4;i++)
+            {
+                Console.WriteLine(t.pop());
+            }
+            Console.WriteLine(t.peek());
+            t.push(0);
+            Console.WriteLine(t.pop());
+
+            Console.ReadLine();
+        }
+    }
+
+    class QueueMain
+    {
+        static void Main(string[] args)
+        {
+            BaseQueue<int> t = DataLoader.GetQueue.IntQueue(5);
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(t.dequeue());
+            }
+          
+            t.enqueue(0);
+            Console.WriteLine(t.dequeue());
+
             Console.ReadLine();
         }
     }
