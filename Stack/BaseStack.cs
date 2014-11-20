@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Stack
 {
-              
-    public class  BaseStack<T>//:baseList<T>
+
+
+    public class BaseStack<T> where T : IComparable
     {
         node<T> top;
        

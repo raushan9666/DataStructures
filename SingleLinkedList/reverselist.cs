@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SingleLinkedList
 {
-    public class reverselist<T>:baseList<T>
+    public class reverselist<T>:baseList<T>  where T :IComparable
     {
         public reverselist(baseList<T> obj)
         {

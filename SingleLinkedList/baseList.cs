@@ -7,17 +7,23 @@ using System.Threading.Tasks;
 
 namespace SingleLinkedList
 {
-     public class node<T>
+     public class node<T> :IComparable<node<T>> where T:IComparable
     {
         public T data;
         public node<T> Next;
+
+             
+        public int CompareTo(node<T> other)
+        {
+            return this.data.CompareTo(other.data);
+        }
     }
 
 
-    public class baseList<T> : IEnumerable, IEnumerator
+    public class baseList<T> where T:IComparable //: IEnumerable, IEnumerator
     {
         
-
+             
         public node<T> Head;
         protected node<T> _current;
         public int count;
