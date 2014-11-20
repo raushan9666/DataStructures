@@ -10,48 +10,141 @@ namespace SingleLinkedList
     {
         public MergeSortList(baseList<T> obj)
         {
-            this.Head = obj.Head;
+            node<T> temp1 = obj.Head;
+            node<T> temp = new node<T>();
+            temp.data = temp1.data;
+            temp1 = temp1.Next;
+            this.Head = temp;
+         
+            while(temp1!=null)
+            {
+                
+                temp.Next = new node<T>();
+                temp = temp.Next;
+                temp.data = temp1.data;
+                temp1 = temp1.Next;
+             
+
+            }
+            //this.Head=obj.Head;
             this.count = obj.count;
             this._current = base._current;
         }
-
-
-        public baseList<T> sort(baseList<T> ip)
+        
+        public void sort()
         {
 
-        }
-        private void breakList(baseList<T> ip)
-        {
-
-        }
-
-        private baseList<T> merge(baseList<T> ip1, baseList<T> ip2)
-        {
+            sorthelper(ref this.Head);
            
-            if (ip1 == null)
-                return ip2;
-            else if (ip2 == null)
-                return ip1;
+        }
+
+        public void sorthelper(ref node<T> head)
+        {
+            if(head==null ||head.Next==null)
+            {
+                return;
+            }
+            node<T> a = null;
+            node<T> b = null;
+            split(head, ref a, ref b);
+            sorthelper(ref a);
+            sorthelper(ref b);
+           head= merge(a, b);
+
+        }
+       
+        private void split(node<T> h1,ref node<T> a ,ref node<T> b)
+        {
+            node<T> slow  ;
+            node<T> fast  ;
+            if(h1==null||h1.Next==null)
+            {
+                a=h1;
+                b=null;
+            }
             else
             {
-                if(ip1.Head.CompareTo(ip2.Head)>0)
+                slow = h1;
+                fast = h1.Next;
+                while(fast!=null)
                 {
-                    node<T> temp = ip1.Head;
-                    ip1.Head = ip2.Head;
-                    ip2.Head = temp;
-                    int cc = ip1.count;
-                    ip1.count = ip2.count;
-                    ip2.count = cc;
+                    fast = fast.Next;
+                    if(fast!=null)
+                    {
+                        fast = fast.Next;
+                        slow = slow.Next;
+                    }
                 }
-                while(ip1!=null&&ip2!=null)
-                {
-                   
-                }
+                a = h1;
+                b = slow.Next;
+                slow.Next = null;
             }
+           
         }
 
+         
+        private node<T> merge(node<T> a, node<T> b)
+        {
+            node<T> r = null;
+          
+            if (a == null)
+                return b;
+            else if (b == null)
+                return a;
+            else
+            {
+
+                if (a.CompareTo(b) <= 0)
+                {
+                    r = a;
+                    r.Next = merge(a.Next, b);
+                }
+                else if (a.CompareTo(b) > 0)
+                {
+                    r = b;
+                    r.Next = merge(a, b.Next);
+                }
 
 
+
+                //while (a != null && b != null)
+                //{
+                //    if (a.CompareTo(b) < 0)
+                //    {
+                //        res = a;
+                //        a = a.Next;
+                //    }
+                //    else if (a.CompareTo(b) > 0)
+                //    {
+                //        res = b;
+                //        b = b.Next;
+                //    }
+                //    else
+                //    {
+                //        res= a;
+                //        a = a.Next;
+                //        b = b.Next;
+                //    }
+                //    res = res.Next;
+                //}
+                //while (a != null)
+                //{
+                //    res = a;
+                //    res = res.Next;
+                //    a = a.Next;
+                //}
+                //while (b != null)
+                //{
+                //    res = b;
+                //    res = res.Next;
+                //    b = b.Next;
+                //}
+
+            }
+            return r;
+        }   
+         
+        
         public void Display()
         {
             node<T> temp = new node<T>();

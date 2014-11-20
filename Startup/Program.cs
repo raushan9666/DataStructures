@@ -14,12 +14,14 @@ namespace Startup
         static void Main(string[] args)
         {
             baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(5);
-            reverselist<int> t1 = new reverselist<int>(t);
-
+            //reverselist<int> t1 = new reverselist<int>(t);
+                        
+            MergeSortList<int> t1 = new MergeSortList<int>(t);
             t1.Display();
-            reverselist<int> reversed = t1.Reverse();
-
-            reversed.Display();
+             t1.sort();
+             //t1.sorthelper(ref t.Head);
+             Console.WriteLine();
+            t1.Display();
             Console.ReadLine();
         }
     }
