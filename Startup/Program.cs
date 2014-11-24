@@ -37,10 +37,8 @@ namespace Startup
                 te = te.Next;
 
             }
-
-
-
-
+            z.PrintSortedData();
+            
                 t.Display();
             Console.WriteLine();
             t =RotateList<int>.RotateEndToFront(t, 0);

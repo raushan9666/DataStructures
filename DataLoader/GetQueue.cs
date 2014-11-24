@@ -16,7 +16,7 @@ namespace DataLoader
             BaseQueue<int> bstack = new BaseQueue<int>();
             for (int i = 0; i < count; i++)
             {
-                bstack.enqueue(r.Next());
+                bstack.enqueue(r.Next(10000));
             }
             return bstack;
         }

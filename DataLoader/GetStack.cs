@@ -15,7 +15,7 @@ namespace DataLoader
             BaseStack<int> bstack= new BaseStack<int>();
             for(int i=0;i<count;i++)
             {
-                bstack.push(r.Next());
+                bstack.push(r.Next(10000));
             }
             return bstack;
         }

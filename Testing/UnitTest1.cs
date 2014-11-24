@@ -23,6 +23,33 @@ namespace Testing
 
 
         }
+       [TestMethod]
+        public void NthHigherPtr()
+        {
+            baseList<int> t = DataLoader.GetLinkedList.IntSingleList(5);
+            MergeSortList<int> t1 = new MergeSortList<int>(t);
+             t1.sort();
+            NextHigherPtr<int> z = new NextHigherPtr<int>();
+            node<int> te = t.Head;
+            while (te != null)
+            {
+                z.Add(te.data);
+                te = te.Next;
+
+            }
+           
+             node<int> actual  = z.GetSortedData();
+             node<int> expected = t1.Head;
+             while (expected != null)
+            {
+                Assert.AreEqual(expected.data, actual.data);
+               
+                actual = actual.Next;
+                expected = expected.Next;
+            }
+        }
+
+
 
         private static void ReverseHelper(baseList<int> t)
         {

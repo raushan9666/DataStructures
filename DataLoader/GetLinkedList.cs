@@ -16,7 +16,7 @@ namespace DataLoader
             baseList<int> obj = new baseList<int>();
             for (int i = 0; i < rcount; i++)
             {
-                obj.Add(r1.Next());
+                obj.Add(r1.Next(10000));
             }
             return obj;
         }
