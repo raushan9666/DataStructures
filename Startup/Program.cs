@@ -13,7 +13,7 @@ namespace Startup
     {
         static void Main(string[] args)
         {
-            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(1);
+            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(5);
             //reverselist<int> t1 = new reverselist<int>(t);
                     
            //MergeSortList<int> t1 = new MergeSortList<int>(t);
@@ -29,8 +29,19 @@ namespace Startup
 
              // baseList<int> res = MergeTwoSortedList<int>.merge(t1, t2);
 
+            NextHigherPtr<int> z = new NextHigherPtr<int>();
+            node<int> te = t.Head;
+            while(te!=null)
+            {
+                z.Add(te.data);
+                te = te.Next;
 
-            t.Display();
+            }
+
+
+
+
+                t.Display();
             Console.WriteLine();
             t =RotateList<int>.RotateEndToFront(t, 0);
             t.Display();
