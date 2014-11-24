@@ -27,19 +27,37 @@ namespace Startup
            // baseList<int> res = MergeTwoSortedList<int>.Merge2(t1);
 
 
-             // baseList<int> res = MergeTwoSortedList<int>.merge(t1, t2);
+            // baseList<int> res = MergeTwoSortedList<int>.merge(t1, t2);
 
-            NextHigherPtr<int> z = new NextHigherPtr<int>();
-            node<int> te = t.Head;
-            while(te!=null)
-            {
-                z.Add(te.data);
-                te = te.Next;
+            #region list with Next higher  p0inter
+            //NextHigherPtr<int> z = new NextHigherPtr<int>();
+            //node<int> te = t.Head;
+            //while(te!=null)
+            //{
+            //    z.Add(te.data);
+            //    te = te.Next;
 
-            }
-            z.PrintSortedData();
+            //}
+            //z.PrintSortedData();
+            #endregion 
+
+
+
+            #region list with random pointers
+
+            CopyRandomPtr<int> t1 = new CopyRandomPtr<int>(t);
+
+           CopyRandomPtr<int> res= t1.Copy(t1);
+
+           Console.WriteLine(res.compare(res.head, t1.head));
+           
+
             
-                t.Display();
+
+#endregion
+
+
+            t.Display();
             Console.WriteLine();
             t =RotateList<int>.RotateEndToFront(t, 0);
             t.Display();
