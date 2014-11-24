@@ -49,9 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="baseList.cs" />
+    <Compile Include="NthFromEnd.cs" />
     <Compile Include="MergeSortList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reverselist.cs" />
+    <Compile Include="MergeTwoSortedList.cs" />
+    <Compile Include="RotateList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

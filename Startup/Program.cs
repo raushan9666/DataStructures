@@ -13,15 +13,34 @@ namespace Startup
     {
         static void Main(string[] args)
         {
-            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(5);
+            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(1);
             //reverselist<int> t1 = new reverselist<int>(t);
-                        
-            MergeSortList<int> t1 = new MergeSortList<int>(t);
-            t1.Display();
-             t1.sort();
-             //t1.sorthelper(ref t.Head);
-             Console.WriteLine();
-            t1.Display();
+                    
+           //MergeSortList<int> t1 = new MergeSortList<int>(t);
+            // t1.sort();
+
+
+           // baseList<int> t2 = DataLoader.GetLinkedList.IntSingleList(3);
+           // t1.sorthelper(ref t2.Head);
+
+
+           // baseList<int> res = MergeTwoSortedList<int>.Merge2(t1);
+
+
+             // baseList<int> res = MergeTwoSortedList<int>.merge(t1, t2);
+
+
+            t.Display();
+            Console.WriteLine();
+            t =RotateList<int>.RotateEndToFront(t, 0);
+            t.Display();
+           // Console.WriteLine(NthFromEnd<int>.GetNthValue(t,0));
+
+            // res.Display();
+
+
+
+           
             Console.ReadLine();
         }
     }
