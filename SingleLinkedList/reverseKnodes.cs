@@ -6,21 +6,36 @@ using System.Threading.Tasks;
 
 namespace SingleLinkedList
 {
-    public class reverseKnodes<T> where T :IComparable
+    public static class reverseKnodes<T> where T :IComparable
     {
-        private baseList<T> _list;
-
-        public node<T> head;
-        public reverseKnodes( baseList<T> t)
+        
+        public  static baseList<T> reverseKNodes(baseList<T> a,int k)
         {
-            _list = t;
-            head = _list.Head;
+            baseList<T> res = new baseList<T>();
+            res.Head = reverhelper(a.Head, k);
+            return res;
         }
 
-
-        public void reverseKNodes()
+        private  static node<T> reverhelper (node<T> a,int k)
         {
-
+            node<T> prev = null;
+            node<T> curr = a;
+            node<T> next = null;
+            int count = 0;
+            while(curr!=null&&count <k)
+            {
+                next = curr.Next;
+                curr.Next = prev;
+                prev = curr;
+                curr = next;
+                count++;
+               
+            }
+            if(curr!=null)
+            {
+                a.Next = reverhelper(curr, k);
+            }
+            return prev;
         }
     }
 }

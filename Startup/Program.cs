@@ -13,7 +13,7 @@ namespace Startup
     {
         static void Main(string[] args)
         {
-            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(5);
+            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(8);
             //reverselist<int> t1 = new reverselist<int>(t);
                     
            //MergeSortList<int> t1 = new MergeSortList<int>(t);
@@ -45,16 +45,35 @@ namespace Startup
 
             #region list with random pointers
 
-            CopyRandomPtr<int> t1 = new CopyRandomPtr<int>(t);
+           // CopyRandomPtr<int> t1 = new CopyRandomPtr<int>(t);
 
-           CopyRandomPtr<int> res= t1.Copy(t1);
+           //CopyRandomPtr<int> res= t1.Copy(t1);
 
-           Console.WriteLine(res.compare(res.head, t1.head));
+           //Console.WriteLine(res.compare(res.head, t1.head));
            
 
             
 
 #endregion
+
+
+
+           #region reverseKnodes
+
+           //t.Display();
+           //Console.WriteLine();
+           //baseList<int> z =reverseKnodes<int>.reverseKNodes(t, 3);
+           //z.Display();
+           #endregion
+
+            #region reverse alternate nodes and append at the end
+
+            t.Display();
+            Console.WriteLine();
+            baseList<int> res =revAlternateAddEnd<int>.reverse(t);
+            res.Display();
+
+            #endregion
 
 
             t.Display();

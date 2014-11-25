@@ -54,6 +54,7 @@
     <Compile Include="NthFromEnd.cs" />
     <Compile Include="MergeSortList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="revAlternateAddEnd.cs" />
     <Compile Include="reverseKnodes.cs" />
     <Compile Include="reverselist.cs" />
     <Compile Include="MergeTwoSortedList.cs" />
