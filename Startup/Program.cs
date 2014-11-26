@@ -13,7 +13,7 @@ namespace Startup
     {
         static void Main(string[] args)
         {
-            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(15);
+            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(2);
             //reverselist<int> t1 = new reverselist<int>(t);
                     
            //MergeSortList<int> t1 = new MergeSortList<int>(t);
@@ -100,11 +100,21 @@ namespace Startup
             #region Delete nodes which have a greater value on right side
 
 
+            //t.Display();
+            //Console.WriteLine();
+            //baseList<int> res = DeleteNodewithGreaterRight<int>.delete(t);
+            //res.Display();
+
+            #endregion
+            #region Split into 2 
+
+
             t.Display();
             Console.WriteLine();
-            baseList<int> res = DeleteNodewithGreaterRight<int>.delete(t);
+            baseList<int> res = SplitAlternative<int>.split(t);
             res.Display();
-
+            Console.WriteLine();
+            t.Display();
             #endregion
 
 

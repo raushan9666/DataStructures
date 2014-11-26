@@ -61,6 +61,7 @@
     <Compile Include="reverselist.cs" />
     <Compile Include="MergeTwoSortedList.cs" />
     <Compile Include="RotateList.cs" />
+    <Compile Include="SplitAlternative.cs" />
     <Compile Include="swapFirstKthLastKth.cs" />
   </ItemGroup>
   <ItemGroup>
