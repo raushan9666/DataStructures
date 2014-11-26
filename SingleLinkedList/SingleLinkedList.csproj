@@ -50,15 +50,18 @@
   <ItemGroup>
     <Compile Include="baseList.cs" />
     <Compile Include="CopyRandomPtr.cs" />
+    <Compile Include="DeleteNodewithGreaterRight.cs" />
     <Compile Include="NextHigherPtr.cs" />
     <Compile Include="NthFromEnd.cs" />
     <Compile Include="MergeSortList.cs" />
+    <Compile Include="PairWiseSwap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="revAlternateAddEnd.cs" />
     <Compile Include="reverseKnodes.cs" />
     <Compile Include="reverselist.cs" />
     <Compile Include="MergeTwoSortedList.cs" />
     <Compile Include="RotateList.cs" />
+    <Compile Include="swapFirstKthLastKth.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

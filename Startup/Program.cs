@@ -13,7 +13,7 @@ namespace Startup
     {
         static void Main(string[] args)
         {
-            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(8);
+            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(15);
             //reverselist<int> t1 = new reverselist<int>(t);
                     
            //MergeSortList<int> t1 = new MergeSortList<int>(t);
@@ -68,9 +68,41 @@ namespace Startup
 
             #region reverse alternate nodes and append at the end
 
+            //t.Display();
+            //Console.WriteLine();
+            //baseList<int> res =revAlternateAddEnd<int>.reverse(t);
+            //res.Display();
+
+            #endregion
+
+            #region PairWise Reverse    
+            ///1->2->3->4->5->6->7 then the function should change it to 2->1->4->3->6->5->7,
+
+            //t.Display();
+            //Console.WriteLine();
+            //baseList<int> res = PairWiseSwap<int>.reverse(t);
+            //res.Display();
+
+            #endregion
+
+
+            #region swap first kth with last kth node
+           
+
+            //t.Display();
+            //Console.WriteLine();
+            //baseList<int> res = swapFirstKthLastKth<int>.swap(t,3);
+            //res.Display();
+
+            #endregion
+
+
+            #region Delete nodes which have a greater value on right side
+
+
             t.Display();
             Console.WriteLine();
-            baseList<int> res =revAlternateAddEnd<int>.reverse(t);
+            baseList<int> res = DeleteNodewithGreaterRight<int>.delete(t);
             res.Display();
 
             #endregion
