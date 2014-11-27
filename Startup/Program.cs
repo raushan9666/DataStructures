@@ -14,6 +14,7 @@ namespace Startup
         static void Main(string[] args)
         {
             baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(2);
+            baseList<int> t2 = DataLoader.GetLinkedList.IntSingleList(1);
             //reverselist<int> t1 = new reverselist<int>(t);
                     
            //MergeSortList<int> t1 = new MergeSortList<int>(t);
@@ -109,13 +110,43 @@ namespace Startup
             #region Split into 2 
 
 
+            //t.Display();
+            //Console.WriteLine();
+            //baseList<int> res = SplitAlternative<int>.split(t);
+            //res.Display();
+            //Console.WriteLine();
+            //t.Display();
+            #endregion
+
+
+            #region Merge at alternate position
+
+
+            //t.Display();
+            //Console.WriteLine();
+            //t2.Display();
+            //Console.WriteLine();
+            //baseList<int> res = MergeAlternate<int>.merge(t,ref t2);
+            //res.Display();
+            //Console.WriteLine();
+           
+            #endregion
+
+
+
+            #region Delete N nodes After M nodes
+
+
             t.Display();
             Console.WriteLine();
-            baseList<int> res = SplitAlternative<int>.split(t);
+            baseList<int> res = DeleteNafterM<int>.delete(t,1,2);
             res.Display();
             Console.WriteLine();
-            t.Display();
+
             #endregion
+
+
+
 
 
             t.Display();

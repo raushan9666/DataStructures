@@ -50,7 +50,9 @@
   <ItemGroup>
     <Compile Include="baseList.cs" />
     <Compile Include="CopyRandomPtr.cs" />
+    <Compile Include="DeleteNafterM.cs" />
     <Compile Include="DeleteNodewithGreaterRight.cs" />
+    <Compile Include="MergeAlternate.cs" />
     <Compile Include="NextHigherPtr.cs" />
     <Compile Include="NthFromEnd.cs" />
     <Compile Include="MergeSortList.cs" />
