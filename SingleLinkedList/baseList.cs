@@ -80,6 +80,8 @@ namespace SingleLinkedList
                 }
             }
 
+            Console.WriteLine();
+
         }
 
 

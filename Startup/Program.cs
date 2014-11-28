@@ -13,8 +13,8 @@ namespace Startup
     {
         static void Main(string[] args)
         {
-            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(2);
-            baseList<int> t2 = DataLoader.GetLinkedList.IntSingleList(1);
+            baseList<int> t =  DataLoader.GetLinkedList.IntSingleList(50);
+            baseList<int> t2 = DataLoader.GetLinkedList.IntSingleList(50);
             //reverselist<int> t1 = new reverselist<int>(t);
                     
            //MergeSortList<int> t1 = new MergeSortList<int>(t);
@@ -137,19 +137,52 @@ namespace Startup
             #region Delete N nodes After M nodes
 
 
-            t.Display();
-            Console.WriteLine();
-            baseList<int> res = DeleteNafterM<int>.delete(t,1,2);
-            res.Display();
-            Console.WriteLine();
+            //t.Display();
+            //Console.WriteLine();
+            //baseList<int> res = DeleteNafterM<int>.delete(t,1,2);
+            //res.Display();
+            //Console.WriteLine();
 
             #endregion
 
+            #region Add Two Numbers
+
+
+            //baseList<char> x1 = DataLoader.GetLinkedList.CharSingleList(1);// new baseList<char>();
+            //x1.Display();
+            // baseList<char> x2 = DataLoader.GetLinkedList.CharSingleList(3);
+            // x2.Display();
+            // baseList<char> result = AddTwoNumber.Add(x1, x2);
+            // result.Display();
+
+
+            #endregion
+
+             #region add in sorted list
+             //MergeSortList<int> t1 = new MergeSortList<int>(t);
+             //t1.sorthelper(ref t.Head);
+             //t.Display();
+             //AddInSortedList<int>.Add(ref t, 390);
+             //t.Display();
+             #endregion 
+
+             #region remove duplicates
+             MergeSortList<int> t1 = new MergeSortList<int>(t);
+             t1.sorthelper(ref t.Head);
+             t.Display();
+             RemoveDuplicate<int>.Sorted(ref t);
+             t.Display();
+
+             Console.WriteLine("t2");
+             t2.Display();
+             RemoveDuplicate<int>.UnSorted(ref t2);
+             t2.Display();
+             #endregion 
 
 
 
 
-            t.Display();
+             t.Display();
             Console.WriteLine();
             t =RotateList<int>.RotateEndToFront(t, 0);
             t.Display();

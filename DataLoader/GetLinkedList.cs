@@ -16,10 +16,21 @@ namespace DataLoader
             baseList<int> obj = new baseList<int>();
             for (int i = 0; i < rcount; i++)
             {
-                obj.Add(r1.Next(10000));
+                obj.Add(r1.Next(10));
             }
             return obj;
         }
+        public static baseList<char> CharSingleList(int rcount)
+        {
+
+            baseList<char> obj = new baseList<char>();
+            for (int i = 0; i < rcount; i++)
+            {
+                obj.Add(Convert.ToChar(r1.Next(9)+48));
+            }
+            return obj;
+        }
+
       
     }
 }
