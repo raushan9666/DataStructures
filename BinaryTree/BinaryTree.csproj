@@ -4,20 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D5B573A-D104-46F6-A619-208D6BA88CC6}</ProjectGuid>
+    <ProjectGuid>{BC21CFAB-E140-4F39-B87F-1202604DD55A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SingleLinkedList</RootNamespace>
-    <AssemblyName>SingleLinkedList</AssemblyName>
+    <RootNamespace>BinaryTree</RootNamespace>
+    <AssemblyName>BinaryTree</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -27,16 +22,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,30 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddInSortedList.cs" />
-    <Compile Include="AddTwoNumber.cs" />
-    <Compile Include="baseList.cs" />
-    <Compile Include="CheckPalindrome.cs" />
-    <Compile Include="CopyRandomPtr.cs" />
-    <Compile Include="DeleteNafterM.cs" />
-    <Compile Include="DeleteNodewithGreaterRight.cs" />
-    <Compile Include="MergeAlternate.cs" />
-    <Compile Include="NextHigherPtr.cs" />
-    <Compile Include="NthFromEnd.cs" />
-    <Compile Include="MergeSortList.cs" />
-    <Compile Include="PairWiseSwap.cs" />
+    <Compile Include="baseTree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoveDuplicate.cs" />
-    <Compile Include="revAlternateAddEnd.cs" />
-    <Compile Include="reverseKnodes.cs" />
-    <Compile Include="reverselist.cs" />
-    <Compile Include="MergeTwoSortedList.cs" />
-    <Compile Include="RotateList.cs" />
-    <Compile Include="SplitAlternative.cs" />
-    <Compile Include="swapFirstKthLastKth.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\Queues\Queues.csproj">
+      <Project>{38f3bd27-063e-47c9-98dc-a4e8a7defb01}</Project>
+      <Name>Queues</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

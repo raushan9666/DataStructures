@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SingleLinkedList
 {
-     public class node<T> :IComparable<node<T>> where T:IComparable
+     public class node<T> :IComparable<node<T>>  where T:IComparable
     {
         public T data;
         public node<T> Next;
@@ -17,6 +17,8 @@ namespace SingleLinkedList
         {
             return this.data.CompareTo(other.data);
         }
+
+    
     }
 
 

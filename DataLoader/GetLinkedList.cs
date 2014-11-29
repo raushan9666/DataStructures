@@ -30,6 +30,16 @@ namespace DataLoader
             }
             return obj;
         }
+        public static baseList<char> CharSingleList_az(int rcount)
+        {
+
+            baseList<char> obj = new baseList<char>();
+            for (int i = 0; i < rcount; i++)
+            {
+                obj.Add(Convert.ToChar(r1.Next(3) + 65));
+            }
+            return obj;
+        }
 
       
     }

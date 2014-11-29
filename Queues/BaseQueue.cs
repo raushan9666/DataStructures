@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Queues
 {
-    public class BaseQueue<T> where T : IComparable
+    public class BaseQueue<T> where  T:IComparable
     {
         node<T> front;
         node<T> rear;
@@ -37,17 +37,35 @@ namespace Queues
             }
             else
             {
-                node<T> temp = rear;
-                while (temp.Next != front)
-                    temp = temp.Next;
-                data = temp.data;
+                if (front == rear)
+                {
+                    data = front.data;
+                    front = null; rear = null;
+                }
+                else
+                {
+                    node<T> temp = rear;
+                    while (temp != null && temp.Next != front)
+                        temp = temp.Next;
+                    data = front.data;
 
-                front = temp;
+                    front = temp;
+                }
             }
             return data;
 
         }
 
+       public bool IsEmpty()
+       {
+           if (front == null && rear == null)
+               return true;
+           return false;
+       }
 
+       public int CompareTo(T other)
+       {
+           return 1;
+       }
     }
 }

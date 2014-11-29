@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Startup.LinkedListMain</StartupObject>
+    <StartupObject>Startup.TreeMain</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,6 +55,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BinaryTree\BinaryTree.csproj">
+      <Project>{bc21cfab-e140-4f39-b87f-1202604dd55a}</Project>
+      <Name>BinaryTree</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataLoader\DataLoader.csproj">
       <Project>{530bc277-8acd-4716-9af9-1e97b36ec3d8}</Project>
       <Name>DataLoader</Name>
@@ -70,6 +74,10 @@
     <ProjectReference Include="..\Stack\Stack.csproj">
       <Project>{8da7a9ae-67ac-42bf-8e68-788a1ddb8a73}</Project>
       <Name>Stack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Testing\Testing.csproj">
+      <Project>{23b9bbcb-f5ce-4aab-a964-1eb9f500375f}</Project>
+      <Name>Testing</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

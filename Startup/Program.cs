@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BinaryTree;
 
 namespace Startup
 {
@@ -167,22 +168,35 @@ namespace Startup
              #endregion 
 
              #region remove duplicates
-             MergeSortList<int> t1 = new MergeSortList<int>(t);
-             t1.sorthelper(ref t.Head);
-             t.Display();
-             RemoveDuplicate<int>.Sorted(ref t);
-             t.Display();
+             //MergeSortList<int> t1 = new MergeSortList<int>(t);
+             //t1.sorthelper(ref t.Head);
+             //t.Display();
+             //RemoveDuplicate<int>.Sorted(ref t);
+             //t.Display();
 
-             Console.WriteLine("t2");
-             t2.Display();
-             RemoveDuplicate<int>.UnSorted(ref t2);
-             t2.Display();
+             //Console.WriteLine("t2");
+             //t2.Display();
+             //RemoveDuplicate<int>.UnSorted(ref t2);
+             //t2.Display();
              #endregion 
 
+            #region Check Palindrome
+
+            baseList<char> c = new baseList<char>();
+            c.Add('A');
+            c.Add('B');
+                 c.Add('C');
+            c.Add('B');
+            c.Add('A');//DataLoader.CharSingleList_az(5);
+            Console.WriteLine(CheckPalindrome<char>.validate(c));
+            c.Add('F');
+            Console.WriteLine(CheckPalindrome<char>.validate(c));
+            #endregion
 
 
 
-             t.Display();
+
+            t.Display();
             Console.WriteLine();
             t =RotateList<int>.RotateEndToFront(t, 0);
             t.Display();
@@ -230,4 +244,24 @@ namespace Startup
             Console.ReadLine();
         }
     }
+
+
+    class TreeMain
+    {
+        static void Main(string[] args)
+        {
+            baseTree<int> t = new baseTree<int>();
+            t.Add(1);
+            t.Add(7);
+            t.Add(8);
+            t.Add(10);
+            t.Add(89);
+
+            t.inorder(t.root);
+            Console.ReadLine();
+        }
+    }
+
+
+
 }
