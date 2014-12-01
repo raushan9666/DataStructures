@@ -65,34 +65,28 @@ namespace BinaryTree
 
         }
 
-        private void AddHelper(treenode<T> r1, T ip)
+
+        public  void AddBST(T ip)
         {
-
-              
-
-
+            root =  AddBST_Helper(root,ip);
+        }
+        private  treenode<T> AddBST_Helper(treenode<T> r1,T ip)
+        {
 
             if (r1 == null)
             {
                 treenode<T> obj = new treenode<T>() { data = ip };
-                r1 = obj;
-                return;
+                 return obj;
             }
-            else if(r1.left==null)
+            else if(ip.CompareTo(r1.data)>0)
             {
-                r1.left = new treenode<T>() { data = ip };
-                return;
+               r1.right =AddBST_Helper(r1.right,ip);
             }
-            else if(r1.right==null)
+            else if(ip.CompareTo(r1.data)<=0)
             {
-                r1.right = new treenode<T>() { data = ip };
-                return;
+              r1.left =AddBST_Helper(r1.left,ip);
             }
-            else
-            {
-                AddHelper(r1.left, ip);
-                AddHelper(r1.right, ip);
-            }
+            return r1;
            
         }
         public void  Preorder(treenode<T> temp)

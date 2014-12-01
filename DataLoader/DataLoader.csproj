@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetBinaryTree.cs" />
     <Compile Include="GetLinkedList.cs" />
     <Compile Include="GetQueue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GetStack.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BinaryTree\BinaryTree.csproj">
+      <Project>{bc21cfab-e140-4f39-b87f-1202604dd55a}</Project>
+      <Name>BinaryTree</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Queues\Queues.csproj">
       <Project>{38f3bd27-063e-47c9-98dc-a4e8a7defb01}</Project>
       <Name>Queues</Name>

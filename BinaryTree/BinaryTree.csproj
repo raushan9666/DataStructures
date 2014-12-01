@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="baseTree.cs" />
+    <Compile Include="LCA.cs" />
+    <Compile Include="LCAinBST.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

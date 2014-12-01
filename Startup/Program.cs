@@ -250,15 +250,34 @@ namespace Startup
     {
         static void Main(string[] args)
         {
-            baseTree<int> t = new baseTree<int>();
-            t.Add(1);
-            t.Add(7);
-            t.Add(8);
-            t.Add(10);
-            t.Add(89);
+        //    baseTree<int> t = new baseTree<int>();
+        //    t.Add(1);
+        //    t.Add(7);
+        //    t.Add(8);
+        //    t.Add(10);
+        //    t.Add(89);
 
-            t.inorder(t.root);
+        //    t.inorder(t.root);
+        //    Console.ReadLine();
+
+
+            #region LCA of Binary Tree
+            //baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(7);
+            //t1.inorder(t1.root);
+            //Console.WriteLine(LCA<int>.GetLCA(t1, 12, 23));
+            //Console.ReadLine();
+#endregion
+
+            #region LCA of Binary Search Tree
+            baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinarySearchTree(7);
+            t1.inorder(t1.root);
+            Console.WriteLine(LCAinBST<int>.GetLCA(t1, 12, 23));
             Console.ReadLine();
+            #endregion
+
+
+
+
         }
     }
 
