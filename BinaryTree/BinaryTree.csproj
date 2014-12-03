@@ -39,10 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="all_r_2_l_Paths.cs" />
     <Compile Include="baseTree.cs" />
+    <Compile Include="Height_Size.cs" />
+    <Compile Include="Identical.cs" />
+    <Compile Include="IsHeightBalanced.cs" />
     <Compile Include="LCA.cs" />
     <Compile Include="LCAinBST.cs" />
+    <Compile Include="Mirror.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="root2leafWithMaxSum.cs" />
+    <Compile Include="root2leafWithSum.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Queues\Queues.csproj">

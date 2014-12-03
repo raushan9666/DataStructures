@@ -269,12 +269,99 @@ namespace Startup
 #endregion
 
             #region LCA of Binary Search Tree
-            baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinarySearchTree(7);
-            t1.inorder(t1.root);
-            Console.WriteLine(LCAinBST<int>.GetLCA(t1, 12, 23));
-            Console.ReadLine();
+            //baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinarySearchTree(7);
+            //t1.inorder(t1.root);
+            //Console.WriteLine(LCAinBST<int>.GetLCA(t1, 12, 23));
+            //Console.ReadLine();
             #endregion
 
+            #region Mirror of Binary Tree
+            //baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(5);
+            //t1.inorder(t1.root);
+            //Console.WriteLine();
+            //baseTree<int> op = Mirror<int>.GetMirror(t1);
+            //op.inorder(op.root);
+            //Console.ReadLine();
+            #endregion
+
+            #region Height of Binary Tree
+            //baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(50);
+            //t1.inorder(t1.root);
+            //Console.WriteLine();
+            //int h = Height_Size<int>.Height(t1.root);
+            //Console.WriteLine("Height of tree {0}",h);
+            //int h1 = Height_Size<int>.Size(t1.root);
+            //Console.WriteLine("size of tree {0}", h1);
+            //Console.ReadLine();
+            #endregion
+
+            #region Check if two tree are same
+            //baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(3);
+            //t1.inorder(t1.root);
+            //Console.WriteLine();
+            //Console.WriteLine("Is Both tree same  {0}",   Identical<int>.IsSame(t1.root,t1.root));
+            //baseTree<int> t2 = DataLoader.GetBinaryTree.IntBinaryTree(5);
+            //Console.WriteLine("Is Both tree same  {0}", Identical<int>.IsSame(t1.root, t2.root));
+            //Console.ReadLine();
+            #endregion
+
+            #region find if there is path from root to leaf whose sum is equal to given value
+           // baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(7);
+           //// baseTree<int> t1 = new baseTree<int>();
+           //// t1.Add(8); t1.Add(1); t1.Add(7); t1.Add(1); t1.Add(4); t1.Add(0); t1.Add(5);
+           // t1.inorder(t1.root);
+           // Console.WriteLine();
+           // root2leafWithSum.find(t1.root, 15);
+           // Console.ReadLine();
+            #endregion
+           
+            #region find max sum root to leaf path
+           // baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(10);
+           //// baseTree<int> t1 = new baseTree<int>();
+           //// t1.Add(8); t1.Add(1); t1.Add(7); t1.Add(1); t1.Add(4); t1.Add(0); t1.Add(5);
+           // t1.inorder(t1.root);
+           // Console.WriteLine();
+           // root2leafWithMaxSum.getMaxSumPath(t1.root);
+           // Console.ReadLine();
+            #endregion
+
+           #region Print All Root to Leaf Path
+           // baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(10);
+           //// baseTree<int> t1 = new baseTree<int>();
+           //// t1.Add(8); t1.Add(1); t1.Add(7); t1.Add(1); t1.Add(4); t1.Add(0); t1.Add(5);
+           // t1.inorder(t1.root);
+           // Console.WriteLine();
+           // all_r_2_l_Paths<int>.printPath(t1.root);
+
+           // baseTree<char> t2 = DataLoader.GetBinaryTree.CharBinaryTree_az(1);
+           // t2.inorder(t2.root);
+           // Console.WriteLine();
+           // all_r_2_l_Paths<char>.printPath(t2.root);
+
+
+           // Console.ReadLine();
+            #endregion
+
+
+            #region Is Height Balanced AVL trees
+            baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(15);
+            // baseTree<int> t1 = new baseTree<int>();
+            // t1.Add(8); t1.Add(1); t1.Add(7); t1.Add(1); t1.Add(4); t1.Add(0); t1.Add(5);
+            t1.inorder(t1.root);
+            Console.WriteLine();
+            IsHeightBalanced<int>.Is(t1.root);
+
+            baseTree<int> t2 = DataLoader.GetBinaryTree.IntBinarySearchTree(20);
+            t2.inorder(t2.root);
+            Console.WriteLine();
+            IsHeightBalanced<int>.Is(t2.root);
+
+
+            Console.ReadLine();
+            #endregion
+            
+                
+                
 
 
 

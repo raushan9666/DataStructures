@@ -30,5 +30,16 @@ namespace DataLoader
             }
             return obj;
         }
+
+        public static baseTree<char> CharBinaryTree_az(int rcount)
+        {
+
+            baseTree<char> obj = new baseTree<char>();
+            for (int i = 0; i < rcount; i++)
+            {
+                obj.Add(Convert.ToChar(r1.Next(26) + 65));
+            }
+            return obj;
+        }
     }
 }
