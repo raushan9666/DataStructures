@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bfs_dfs.cs" />
+    <Compile Include="CycleDetection.cs" />
     <Compile Include="graph.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

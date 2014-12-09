@@ -540,14 +540,18 @@ namespace Startup
             graph g = new graph(v);
             g.addEdge(0, 2);
             g.addEdge(2, 1);
-            g.addEdge(1, 0);
+           g.addEdge(1, 0);
             g.addEdge(0, 3);
             g.addEdge(3, 4);
             g.addEdge(3, 5);
             g.addEdge(4, 6);
-            g.DFS();
+         
+            // BFS and DFS
+            bfs_dfs.DFS(g);
             Console.WriteLine("BFS");
-            g.BFS();
+            bfs_dfs.BFS(g);
+            // Cycle detection in directed and undirected graph
+            Console.WriteLine(CycleDetection.undirectedGraph(g));
             Console.ReadLine();
         }
     }
