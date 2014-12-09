@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BinaryTree;
+using Tries;
+using System.IO;
+using Heap;
 
 namespace Startup
 {
@@ -344,28 +347,211 @@ namespace Startup
 
 
             #region Is Height Balanced AVL trees
-            baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(15);
-            // baseTree<int> t1 = new baseTree<int>();
-            // t1.Add(8); t1.Add(1); t1.Add(7); t1.Add(1); t1.Add(4); t1.Add(0); t1.Add(5);
+            //baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(15);
+            //// baseTree<int> t1 = new baseTree<int>();
+            //// t1.Add(8); t1.Add(1); t1.Add(7); t1.Add(1); t1.Add(4); t1.Add(0); t1.Add(5);
+            //t1.inorder(t1.root);
+            //Console.WriteLine();
+            //IsHeightBalanced<int>.Is(t1.root);
+
+            //baseTree<int> t2 = DataLoader.GetBinaryTree.IntBinarySearchTree(20);
+            //t2.inorder(t2.root);
+            //Console.WriteLine();
+            //IsHeightBalanced<int>.Is(t2.root);
+
+
+            //Console.ReadLine();
+            #endregion
+
+            #region Children Sum Property
+
+            //baseTree<int> t1 = DataLoader.GetBinaryTree.IntBinaryTree(5);
+             baseTree<int> t1 = new baseTree<int>();
+             t1.Add(8); t1.Add(1); t1.Add(7); t1.Add(1); t1.Add(4); t1.Add(0); t1.Add(5);
             t1.inorder(t1.root);
             Console.WriteLine();
-            IsHeightBalanced<int>.Is(t1.root);
+            if(!ChildrenSum.IsValid(t1.root))
+            {
+               t1.root= ChildrenSum.Convert(t1.root);
+               t1.inorder(t1.root);
+               if (ChildrenSum.IsValid(t1.root))
+               {
+                   Console.WriteLine("Success fully converted");
+               }
 
-            baseTree<int> t2 = DataLoader.GetBinaryTree.IntBinarySearchTree(20);
-            t2.inorder(t2.root);
-            Console.WriteLine();
-            IsHeightBalanced<int>.Is(t2.root);
-
-
+            }
+                     
             Console.ReadLine();
             #endregion
-            
-                
-                
+
+
 
 
 
         }
+    }
+
+
+    class TrieMain
+    {
+            static void Main(string[] args)
+        {
+              #region tries
+            //string[] paths = { "dict/acc.txt" };
+            //Trie _dict = new Trie(10);
+            //string tmp = String.Empty;
+            //Timer t = new Timer();
+            //foreach (string path in paths)
+            //{
+            //    using (StreamReader sr = new StreamReader(path, Encoding.ASCII))
+            //    {
+            //        while ((tmp = sr.ReadLine()) != null)
+            //        {
+            //            _dict.Add(tmp.Split(' ')[0]);
+            //        }
+            //    }
+            //}
+            //t.GetRuntime();
+            //string str = string.Empty;
+            //List<string> result = new List<string>();
+            //while (true)
+            //{
+            //    result.Clear();
+            //    Console.WriteLine("Enter the Search String");
+            //    str = Console.ReadLine();
+            //    t.reset();
+            //    result = _dict.SearchPrefix(str, 10);
+            //    t.GetRuntime();
+            //    Console.WriteLine("------------------------------------------------------------------------");
+            //    foreach (string item in result)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+              #endregion
+            #region suffix tries
+            string[] paths = { "dict/web2" };
+            SuffixTrie _dict = new SuffixTrie();
+            string tmp = String.Empty;
+            Timer t = new Timer();
+            foreach (string path in paths)
+            {
+                using (StreamReader sr = new StreamReader(path, Encoding.ASCII))
+                {
+                    while ((tmp = sr.ReadLine()) != null)
+                    {
+                        _dict.Add(tmp);
+                    }
+                }
+            }
+            t.GetRuntime();
+            string str = string.Empty;
+
+            Console.WriteLine(_dict.IsSubString("us")); 
+                      Console.WriteLine(_dict.IsSuffix("singh"));
+                      Console.WriteLine(_dict.LongestRepeat());
+
+
+            //List<string> result = new List<string>();
+            //while (true)
+            //{
+            //    result.Clear();
+            //    Console.WriteLine("Enter the Search String");
+            //    str = Console.ReadLine();
+            //    t.reset();
+            //    result = _dict.SearchPrefix(str, 10);
+            //    t.GetRuntime();
+            //    Console.WriteLine("------------------------------------------------------------------------");
+            //    foreach (string item in result)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+            #endregion
+        }
+    }
+
+
+
+    class heap
+    {
+        static void Main(string[] args)
+        {
+            #region MinHeap
+            // MinHeap<int> _minheap = new MinHeap<int>();
+            //_minheap.Add(34);
+            //_minheap.Add(12);
+            //_minheap.Add(4);
+            //_minheap.Add(11);
+            //_minheap.Add(3);
+            //_minheap.Add(10);
+
+            //while (_minheap.count() > 0)
+            //{
+            //    Console.WriteLine(_minheap.ExtractMin());
+            //}
+            #endregion
+
+            #region Priority queue
+            //PriorityQueue<string> pq = new PriorityQueue<string>();
+            //pq.Add(3, "raushan");
+            //pq.Add(2, "abhay");
+            //pq.Add(4, "anand");
+            //pq.Add(1, "abc");
+            //int count = pq.count();
+            //for (int i = 0; i < count; i++)
+            //{
+            //    Console.WriteLine(pq.getMin());
+            //}
+            #endregion
+            #region Kthsmallest
+            //int[,] mat = new int[4, 4] { { 10, 20, 30, 40 }, { 15, 25, 35, 45 }, { 27, 29, 37, 48 }, { 32, 33, 39, 50 } };
+            //Console.WriteLine(KthSmallest2D.Get(mat,4,4, 10).data);
+            #endregion
+            #region top 100
+
+            //top10Numbers<int> t = new top10Numbers<int>();
+            //Random r = new Random();
+            //for (int i = 0; i < 1000;i++ )
+            //{
+            //    t.Add(r.Next(100));
+            //}
+            
+            #endregion
+
+            #region top 10 words
+            top10Words r = new top10Words();
+            r.run();
+            #endregion
+
+
+            Console.ReadLine();
+        }
+    }
+
+
+     class Timer
+    {
+        DateTime start;
+        DateTime end;
+
+        public Timer()
+        {
+            start = DateTime.Now;
+            
+        }
+        public void reset()
+        {
+            start = DateTime.Now;
+        }
+        public  void GetRuntime()
+        {
+            end = DateTime.Now;
+            Console.WriteLine((end - start).Milliseconds + " Mili seconds");
+        }
+
+
+
     }
 
 

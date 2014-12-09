@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Startup.TreeMain</StartupObject>
+    <StartupObject>Startup.heap</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="dict\web2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="dict\web2a">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BinaryTree\BinaryTree.csproj">
@@ -62,6 +68,10 @@
     <ProjectReference Include="..\DataLoader\DataLoader.csproj">
       <Project>{530bc277-8acd-4716-9af9-1e97b36ec3d8}</Project>
       <Name>DataLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Heap\Heap.csproj">
+      <Project>{04a60d51-55c8-440c-a955-c5e331c71e0e}</Project>
+      <Name>Heap</Name>
     </ProjectReference>
     <ProjectReference Include="..\Queues\Queues.csproj">
       <Project>{38f3bd27-063e-47c9-98dc-a4e8a7defb01}</Project>
@@ -79,6 +89,15 @@
       <Project>{23b9bbcb-f5ce-4aab-a964-1eb9f500375f}</Project>
       <Name>Testing</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tries\Tries.csproj">
+      <Project>{c28bb955-4067-4157-ba77-3efd893806da}</Project>
+      <Name>Tries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dict\acc.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

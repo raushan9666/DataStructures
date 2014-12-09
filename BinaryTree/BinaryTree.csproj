@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="all_r_2_l_Paths.cs" />
     <Compile Include="baseTree.cs" />
+    <Compile Include="ChildrenSum.cs" />
     <Compile Include="Height_Size.cs" />
     <Compile Include="Identical.cs" />
     <Compile Include="IsHeightBalanced.cs" />
