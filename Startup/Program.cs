@@ -10,6 +10,7 @@ using BinaryTree;
 using Tries;
 using System.IO;
 using Heap;
+using Graph;
 
 namespace Startup
 {
@@ -473,7 +474,7 @@ namespace Startup
 
 
 
-    class heap
+    class heapMain
     {
         static void Main(string[] args)
         {
@@ -525,6 +526,28 @@ namespace Startup
             #endregion
 
 
+            Console.ReadLine();
+        }
+    }
+
+
+
+    class graphMain
+    {
+        static void Main(string[] args)
+        {
+            int v = 7;
+            graph g = new graph(v);
+            g.addEdge(0, 2);
+            g.addEdge(2, 1);
+            g.addEdge(1, 0);
+            g.addEdge(0, 3);
+            g.addEdge(3, 4);
+            g.addEdge(3, 5);
+            g.addEdge(4, 6);
+            g.DFS();
+            Console.WriteLine("BFS");
+            g.BFS();
             Console.ReadLine();
         }
     }

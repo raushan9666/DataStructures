@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Startup.heap</StartupObject>
+    <StartupObject>Startup.graphMain</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -68,6 +68,10 @@
     <ProjectReference Include="..\DataLoader\DataLoader.csproj">
       <Project>{530bc277-8acd-4716-9af9-1e97b36ec3d8}</Project>
       <Name>DataLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Graph\Graph.csproj">
+      <Project>{127ff919-a09f-4d2d-9165-2cb5a9eefa43}</Project>
+      <Name>Graph</Name>
     </ProjectReference>
     <ProjectReference Include="..\Heap\Heap.csproj">
       <Project>{04a60d51-55c8-440c-a955-c5e331c71e0e}</Project>

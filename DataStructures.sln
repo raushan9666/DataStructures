@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tries", "Tries\Tries.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heap", "Heap\Heap.csproj", "{04A60D51-55C8-440C-A955-C5E331C71E0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{127FF919-A09F-4D2D-9165-2CB5A9EEFA43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{04A60D51-55C8-440C-A955-C5E331C71E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A60D51-55C8-440C-A955-C5E331C71E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04A60D51-55C8-440C-A955-C5E331C71E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{127FF919-A09F-4D2D-9165-2CB5A9EEFA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{127FF919-A09F-4D2D-9165-2CB5A9EEFA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{127FF919-A09F-4D2D-9165-2CB5A9EEFA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{127FF919-A09F-4D2D-9165-2CB5A9EEFA43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
