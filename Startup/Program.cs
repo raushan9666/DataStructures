@@ -540,18 +540,38 @@ namespace Startup
             graph g = new graph(v);
             g.addEdge(0, 2);
             g.addEdge(2, 1);
-           g.addEdge(1, 0);
+           g.addEdge(0, 1);
             g.addEdge(0, 3);
             g.addEdge(3, 4);
             g.addEdge(3, 5);
-            g.addEdge(4, 6);
-         
+            g.addEdge(1, 6);
+           // g.addEdge(4, 6);
+
+            #region BFS and DFS
             // BFS and DFS
             bfs_dfs.DFS(g);
             Console.WriteLine("BFS");
             bfs_dfs.BFS(g);
+            #endregion
+            #region Cycle detection 
             // Cycle detection in directed and undirected graph
             Console.WriteLine(CycleDetection.undirectedGraph(g));
+            Console.WriteLine(CycleDetection.directedGraph(g));
+            #endregion
+            #region Bipartite
+            Console.WriteLine(Bipartite.IsBapartite(g));
+            #endregion
+            #region Topological sort
+            BaseStack<int> result = TopologicalSort.sort(g);
+            for (int i = 0; i < g.vertexcount;i++)
+                Console.Write(result.pop()+" , ");
+            #endregion
+
+           
+            #region Strongly connected 
+            Console.WriteLine(Graph.SCC.IsSSC(g));
+            #endregion
+              
             Console.ReadLine();
         }
     }
