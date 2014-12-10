@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Startup.graphMain</StartupObject>
+    <StartupObject>Startup.ArrayMain</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayMain.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,6 +62,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Array\Array.csproj">
+      <Project>{2f8bf8e8-926b-43de-b967-6c9fcfff0f9b}</Project>
+      <Name>Array</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BinaryTree\BinaryTree.csproj">
       <Project>{bc21cfab-e140-4f39-b87f-1202604dd55a}</Project>
       <Name>BinaryTree</Name>

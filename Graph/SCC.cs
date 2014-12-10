@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stack;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,40 @@ namespace Graph
             }
             return true;
 
+
+        }
+
+
+
+        public static void printssc(graph g)
+        {
+           BaseStack<int> s=  TopologicalSort.sort(g);
+           transpose(ref g);
+           bool[] visited = new bool[g.vertexcount];
+
+           int v;
+           for (int i = 0; i < g.vertexcount;i++)
+           {
+               v = s.pop();
+               if (!visited[v])
+               {
+                   printdfs(g, visited, v);
+                   Console.WriteLine();
+               }
+           }
+               
+
+        }
+
+        static void printdfs(graph g,bool [] visited,int v)
+        {
+            visited[v] = true;
+            Console.Write(v +" ");
+            foreach (int item in g.adj[v])
+            {
+                if (!visited[item])
+                    printdfs(g, visited, item);
+            }
 
         }
 
